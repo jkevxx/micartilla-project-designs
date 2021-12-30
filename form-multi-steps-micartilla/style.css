@@ -1,0 +1,244 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+
+  --main-color: #003638;
+  --secondary-color: #055052;
+  --third-color: #53b8bb;
+  --background-color: #f3f2c91a;
+  --advertence-color: #bb2929;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow: hidden;
+  font-size: 1.6rem;
+  background: var(--background-color);
+  /* background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d); */
+}
+::selection {
+  color: #fff;
+  background: var(--third-color);
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+.container {
+  width: 33rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.container header {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form {
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page {
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field {
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+  margin: 4px;
+}
+form .page .field select {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button {
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: var(--third-color);
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover {
+  background: #000;
+}
+form .page .btns button {
+  margin-top: -20px !important;
+}
+form .page .btns button.prev {
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next {
+  margin-left: 3px;
+}
+.container .progress-bar {
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.container .progress-bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active {
+  border-color: var(--third-color);
+  background: var(--third-color);
+}
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  content: "";
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after {
+  background: var(--third-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+.progress-bar .step p.active {
+  color: var(--third-color);
+  transition: 0.2s linear;
+}
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active {
+  display: block;
+  color: #fff;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+
+.formulario__mensaje {
+  color: var(--advertence-color);
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+}
+
+.formulario__mensaje-activo {
+  display: block;
+  /* margin-top: 0.1rem; */
+}
+
+.formulario__mensaje-fecha {
+  color: var(--advertence-color);
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+}
+
+.formulario__mensaje-fecha-activo {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    width: 100vw;
+  }
+}

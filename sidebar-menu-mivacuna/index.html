@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Sidebar</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="container">
+
+    <nav class="navbar">
+      <!-- <div class="navbar__container"> -->
+      <ul class="navbar__menu">
+        <!-- <li class="list head">
+            <a href="#">
+              <span class="title">Mi Vacuna</span>
+            </a>
+          </li> -->
+
+        <li class="list active">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </span>
+            <span class="title">Esquema</span>
+          </a>
+        </li>
+
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <span class="title">Profile</span>
+          </a>
+        </li>
+
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </span>
+            <span class="title">Sedes</span>
+          </a>
+        </li>
+
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <span class="title">Ajustes</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- </div> -->
+    </nav>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+
+      <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </div>
+
+      <div class="sidebar__search">
+        <a href="#" for="search">
+        </a>
+        <label for="search">
+          <span class="icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </span>
+        </label>
+        <form action="" class="sidebar__input">
+          <input type="text" name="" id="search" class="search" placeholder="Buscar" required>
+          <!-- <input type="submit" class="button" value=""> -->
+        </form>
+      </div>
+
+      <div class="sidebar__notification">
+        <a href="#" class="icon" onclick="notification()">
+          <!-- <span class="iconify" data-icon="clarity:notification-solid"></span> -->
+          <span class="iconify" data-icon="clarity:notification-solid-badged"></span>
+        </a>
+        <div class="notification-content">
+          <ul class="links">
+            <li>
+              <a href="#">Notificación 1</a>
+            </li>
+            <li>
+              <a href="#">Notificación 2</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="dropdown-item">
+        <div class="imgBox">
+          <img src="./profile.jpg" alt="" onclick="myFunction()">
+        </div>
+        <div class="dropdown-content">
+          <ul class="links">
+            <li><a href="#">
+                <ion-icon name="person-circle-outline" aria-hidden="true"></ion-icon> Mi Perfil
+              </a></li>
+            <li><a href="#">
+                <ion-icon name="sync-circle" aria-hidden="true"></ion-icon> Cambiar cuenta
+              </a></li>
+            <div class="divider"></div>
+            <li><a href="#">
+                <ion-icon name="settings" aria-hidden="true"></ion-icon> Ajustes
+              </a></li>
+            <li><a href="#">
+                <ion-icon name="information-circle" aria-hidden="true"></ion-icon> Ayuda
+              </a></li>
+            <div class="divider"></div>
+            <li><a href="#">
+                <ion-icon name="log-out" aria-hidden="true"></ion-icon> Logout
+              </a></li>
+          </ul>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section class="main__order">
+        <a href="#" class="main__order-options" onclick="option()">
+          <ion-icon name="options"></ion-icon>Ordenar Por
+        </a>
+        <div class="option-content">
+          <ul class="links">
+            <li>
+              <a href="#">Más importante</a>
+            </li>
+            <li>
+              <a href="#">Fecha</a>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="main__section">
+        <div class="card">
+          <div class="card__body ">
+            <h2 class="card-title">Nombre Vacuna 1</h2>
+            <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque nesciunt
+              illo
+              at libero quibusdam eaque debitis. Quis aspernatur, voluptatum ipsam consectetur molestiae neque libero
+              quod
+              eos eum reiciendis repellendus.
+            </p>
+          </div>
+          <a href="#" class="card-button">
+            <ion-icon name="add-circle"></ion-icon>Añadir
+          </a>
+        </div>
+        <div class="card">
+          <div class="card__body ">
+            <h2 class="card-title">Nombre Vacuna 1</h2>
+            <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque nesciunt
+              illo
+              at libero quibusdam eaque debitis. Quis aspernatur, voluptatum ipsam consectetur molestiae neque libero
+              quod
+              eos eum reiciendis repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus odit
+              odio cum nemo, provident alias exercitationem! Expedita cupiditate quod, culpa totam tempore enim, non,
+              vero a labore necessitatibus maiores deserunt.
+            </p>
+          </div>
+          <a href="#" class="card-button">
+            <ion-icon name="add-circle"></ion-icon>Añadir
+          </a>
+        </div>
+        <div class="card">
+          <div class="card__body ">
+            <h2 class="card-title">Nombre Vacuna 1</h2>
+            <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque nesciunt
+              illo
+              at libero quibusdam eaque debitis. Quis aspernatur, voluptatum ipsam consectetur molestiae neque libero
+              quod
+              eos eum reiciendis repellendus.
+            </p>
+          </div>
+          <a href="#" class="card-button">
+            <ion-icon name="add-circle"></ion-icon>Añadir
+          </a>
+        </div>
+        <div class="card">
+          <div class="card__body ">
+            <h2 class="card-title">Nombre Vacuna 1</h2>
+            <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque nesciunt
+              illo
+              at libero quibusdam eaque debitis. Quis aspernatur, voluptatum ipsam consectetur molestiae neque libero
+              quod
+              eos eum reiciendis repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus odit
+              odio cum nemo, provident alias exercitationem! Expedita cupiditate quod, culpa totam tempore enim, non,
+              vero a labore necessitatibus maiores deserunt.
+            </p>
+          </div>
+          <a href="#" class="card-button">
+            <ion-icon name="add-circle"></ion-icon>Añadir
+          </a>
+        </div>
+        <div class="card">
+          <div class="card__body ">
+            <h2 class="card-title">Nombre Vacuna 1</h2>
+            <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque nesciunt
+              illo
+              at libero quibusdam eaque debitis. Quis aspernatur, voluptatum ipsam consectetur molestiae neque libero
+              quod
+              eos eum reiciendis repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus odit
+              odio cum nemo, provident alias exercitationem! Expedita cupiditate quod, culpa totam tempore enim, non,
+              vero a labore necessitatibus maiores deserunt.
+            </p>
+          </div>
+          <a href="#" class="card-button">
+            <ion-icon name="add-circle"></ion-icon>Añadir
+          </a>
+        </div>
+
+      </section>
+      <footer class="footer">
+        <div>
+          <!-- <p>hola mundo</p> -->
+        </div>
+      </footer>
+    </main>
+
+
+  </div>
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+  <script src="./sidebar-menu.js"></script>
+</body>
+
+</html>

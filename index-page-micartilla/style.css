@@ -1,0 +1,245 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+
+  --primary-color: #003638;
+  --secondary-color: #055052;
+  --third-color: #53b8bb;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--body-font);
+}
+
+.navbar {
+  /* position: inherit; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+}
+
+.navbar__title {
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.navbar__option a {
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-right: 2rem;
+}
+
+.content {
+  background-color: rgba(83, 184, 187, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.container__imagebg {
+  width: 100%;
+  height: 80rem;
+  background-image: url("./vaccine.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.container__imagebg .content__option {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container__imagebg .content__option-title {
+  font-size: 5rem;
+  /* font-weight: bold; */
+  color: #fff;
+  margin-left: 2rem;
+}
+
+.container__half {
+  margin-top: 18rem;
+  display: flex;
+  padding: 4rem;
+}
+
+.container__half h2 {
+  color: var(--primary-color);
+  font-size: 5rem;
+  margin-right: 2rem;
+}
+
+.container__half .container__half-text {
+  width: 60%;
+}
+
+.container__cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem;
+  margin-top: 18rem;
+  /* flex-wrap: wrap; */
+}
+
+.container__cards .card {
+  width: 40rem;
+  background: #f2f2f2;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+.container__cards .card .card__title {
+  margin-bottom: 2rem;
+}
+
+.container__information {
+  display: flex;
+  background: var(--primary-color);
+  /* width: 80%; */
+  margin-top: 18rem;
+}
+
+.container__information-item {
+  color: #fff;
+  padding: 6rem;
+}
+
+.container__information img {
+  position: relative;
+  top: 10rem;
+  width: 80vw;
+  object-fit: contain;
+}
+
+.footer {
+  margin-top: 38rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20rem;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4rem;
+}
+
+.footer .footer__information {
+  width: 50%;
+}
+
+.footer .footer__socialNetworks {
+  width: 40%;
+}
+
+.footer .footer__socialNetworks a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 4rem;
+}
+
+.footer .footer__socialNetworks ion-icon {
+  margin-right: 1rem;
+  position: relative;
+  top: 4px;
+  font-size: 2rem;
+}
+
+@media (max-width: 480px) {
+  .navbar__title {
+    font-size: 2.2rem;
+    margin-left: 0.5rem;
+  }
+
+  .navbar__option a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .container__half {
+    margin-top: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+  }
+
+  .container__half h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .container__half .container__half-text {
+    width: 100%;
+  }
+
+  .container__cards {
+    margin-top: 8rem;
+    flex-wrap: wrap;
+  }
+
+  .container__cards .card {
+    margin-bottom: 2rem;
+  }
+
+  .container__information {
+    margin-top: 8rem;
+  }
+
+  .container__information img {
+    display: none;
+  }
+
+  .footer {
+    margin-top: 18rem;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .footer .footer__information {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer .footer__socialNetworks {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 868px) {
+  .container__half h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .container__cards .card {
+    margin-left: 2rem;
+  }
+
+  .container__information img {
+    display: none;
+  }
+
+  .footer {
+    margin-top: 25rem;
+  }
+}
